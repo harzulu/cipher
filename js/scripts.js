@@ -25,7 +25,6 @@ function reverseString(str) {
 
 
 const sentence = prompt("What is your sentence?");
-
 //alert(sentence);
 
 const upperLetters = lettersToUpper(sentence);

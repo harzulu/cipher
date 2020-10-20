@@ -1,3 +1,6 @@
+const sentence = prompt("What is your sentence?");
+//alert(sentence);
+
 function lettersToUpper(string) {
   const firstLetter = string.charAt(0);
   const lastLetter = string.charAt(string.length - 1);
@@ -14,18 +17,12 @@ function newSentence(string, fullSentence) {
 }
 
 function middleLetter(string, sentence) {
-  const halfLetter = (sentence.length) / 2;
-
-  return sentence.charAt(halfLetter) + string;
+  return sentence.charAt(sentence.length / 2) + string;
 }
 
 function reverseString(str) {
   return str.split("").reverse().join("");
 }
-
-
-const sentence = prompt("What is your sentence?");
-//alert(sentence);
 
 const upperLetters = lettersToUpper(sentence);
 //alert(upperLetters);
@@ -43,10 +40,12 @@ const reversed = reverseString(biggerSentence);
 //alert(reversed);
 
 $(document).ready(function() {
-  $(".original").click(function() {
+  $(".click-me").click(function() {
+    $(".original").slideToggle();
     $(".sentence").html(sentence);
   });
-  $(".new").click(function() {
+  $(".title").click(function() {
+    $(".new").slideToggle();
     $(".sentence").html(reversed);
   });
 });
